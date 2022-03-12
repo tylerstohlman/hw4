@@ -10,17 +10,18 @@ class SessionsController < ApplicationController
         flash[:notice] = "Welcome, #{@user.username}."
         redirect_to "/places"
       else
-        flash[:notice] = "Nope"
+        flash[:notice] = "Incorrect, Try Again"
         redirect_to "/sessions/new"
       end
     else
-      flash[:notice] = "Nope"
+      flash[:notice] = "Incorrect, Try Again"
       redirect_to "/sessions/new"
     end
   end
-
+  
   def destroy
     session[:user_id] = nil
     redirect_to "/sessions/new"
   end
+
 end
