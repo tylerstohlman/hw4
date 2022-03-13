@@ -6,8 +6,6 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params["id"])
-    @post = Post.new
-    @post.place_id = @place.id
   end
   
 
