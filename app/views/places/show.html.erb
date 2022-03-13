@@ -2,7 +2,7 @@
 <h1><%= @place.name %></h1>
 
 <p>
-  <a href="/posts/new?place_id=<%= @place.id%>"> New Post</a>
+  <a href="/posts/new?place_id=<%= @place.id%>"> <button type="button" class="btn btn-outline-secondary">New Post</button></a>
 </p>
 
 <% if @current_user %>
